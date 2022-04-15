@@ -9,6 +9,9 @@ Route::get('/users', [UserController::class, 'index'])
 Route::get('/users/create', [UserController::class, 'create'])
     ->name('users.create');
 
+Route::post('/users', [UserController::class, 'store'])
+    ->name('users.store');
+
 Route::get('/users/{id}', [UserController::class, 'show'])
     ->name('users.show');
 
